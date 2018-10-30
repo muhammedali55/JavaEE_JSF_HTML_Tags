@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+</head>
+<h:body>
+<h:form>
+Hobileriniz<br />
+<h:selectBooleanCheckbox value="Futboll" /><br />
+<h:selectBooleanCheckbox value="Kitap"/><br />
+Silinecek Kayıtları seçiniz<br />
+<h:selectManyCheckbox value="#{indexBean.data}">
+ <f:selectItem itemValue = "1" itemLabel = "Kayıt - 1" />
+ <f:selectItem itemValue = "2" itemLabel = "Kayıt - 2" />
+</h:selectManyCheckbox>
+<h:commandButton value="İşlem Yap" action="result" /><br />
+Yaş Aralığınızı Seçiniz.
+<h:selectOneRadio value="#{indexBean.radioData}">
+<f:selectItem itemValue = "1" itemLabel = "0 - 17" />
+ <f:selectItem itemValue = "2" itemLabel = "18 - 100" />
+</h:selectOneRadio>
+<h:commandButton value="İşlem Yap" action="result" /><br />
+İl Seçiniz..
+<h:selectOneMenu value="#{indexBean.secilenIl}">
+<f:selectItem itemValue="01" itemLabel="Adana"/>
+<f:selectItem itemValue="06" itemLabel="Ankara"/>
+<f:selectItem itemValue="34" itemLabel="İstanbul"/>
+<f:selectItem itemValue="55" itemLabel="Samsun"/>
+</h:selectOneMenu>
+</h:form>
+</h:body>
+</html>
